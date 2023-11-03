@@ -3,10 +3,15 @@ package DavideSalzani.ProgettoU2W1D5.Services;
 import DavideSalzani.ProgettoU2W1D5.Services.interfaceEntitiesDao.IPostazioneDao;
 import DavideSalzani.ProgettoU2W1D5.entities.Postazione;
 import DavideSalzani.ProgettoU2W1D5.entitiesRepo.PostazioneRepo;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
+@Slf4j
 public class PostazioneService implements IPostazioneDao {
+    @Autowired
     private PostazioneRepo postazioneRepo;
     @Override
     public void save(Postazione postazione) {
