@@ -1,16 +1,14 @@
 package DavideSalzani.ProgettoU2W1D5.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 
 @Entity
 @Table(name = "postazione")
 @Getter
+@Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
