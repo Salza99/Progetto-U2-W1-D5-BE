@@ -23,7 +23,7 @@ public class Edificio {
     private String nome;
     private String indirizzo;
     private String citta;
-    @OneToMany
+    @OneToMany(mappedBy = "edificio", cascade = CascadeType.REMOVE)
     private List<Postazione> postazione;
     public static class EdificioBuilder{
         private Faker faker = new Faker(Locale.ITALY);

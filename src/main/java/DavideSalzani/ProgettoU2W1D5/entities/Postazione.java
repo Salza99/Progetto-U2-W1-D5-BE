@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.util.List;
+
 @Entity
 @Table(name = "postazione")
 @Getter
@@ -21,5 +23,8 @@ public class Postazione {
     private TipoPostazione tipoPostazione;
     private Integer numeroMassimoOccupanti;
     @ManyToOne
+    @JoinColumn(name = "edificio_id")
     private Edificio edificio;
+    @ManyToMany(mappedBy = "prenotazioni")
+    private List<User> utentiPrenotati;
 }
